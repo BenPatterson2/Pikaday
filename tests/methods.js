@@ -1,10 +1,13 @@
-var Pikaday = require('../'),
-    expect = require('expect.js');
+const expect = require('expect.js');
 
 describe('Pikaday public method', function ()
 {
     'use strict';
-
+    let Pikaday;
+    before(function(){
+        Pikaday = require('../pikaday');
+    });
+    
     describe('#getDate()', function() {
         it('should return null if date not set', function() {
             expect(new Pikaday().getDate()).to.be(null);

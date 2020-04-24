@@ -16,7 +16,9 @@
     "url": "https://github.com/Pikaday/Pikaday.git"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
     "expect.js": "^0.3.1",
+    "jsdom": "^16.2.2",
     "jshint": "^2.9.6",
     "mocha": "^5.2.0"
   },
@@ -33,7 +35,10 @@
     ]
   },
   "scripts": {
-    "test": "testling",
+    "test": "mocha ./tests/*.js",
     "lint": "jshint *.js plugins/*.js tests/*.js"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
   }
 }
